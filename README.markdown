@@ -12,7 +12,7 @@ Front-end page that initialized the ContentAudir sub-class and performs an audit
 #Sample Usage of other Web Event Functions
 
 ## Read a Page by ID
-`$assetArgs = array('type' => 'page', 'id' => 'b65ddc567f000001000225f076446430');
+$assetArgs = array('type' => 'page', 'id' => 'b65ddc567f000001000225f076446430');
 if ($response = $audit->readAsset($assetArgs)) {
 	echo '<pre>';
 	print_r($response);
@@ -22,10 +22,10 @@ if ($response = $audit->readAsset($assetArgs)) {
 	print_r($audit->getEventLog());
 	echo '</pre>';
 }
-die();`
+die();
 
 ## Edit a Page (assuming it has a Default Data Definition with a single text field)
-`$pageData = array(
+$pageData = array(
 	'id' => 'b65ddc567f000001000225f076446430',
 	'name' => 'test-webservice-edit',
 	'shouldBePublished' => false,
@@ -62,4 +62,4 @@ if ($response = $audit->editAsset($pageData, 'page')) {
 	print_r($audit->getEventLog());
 	echo '</pre>';
 }
-die();`
+die();
